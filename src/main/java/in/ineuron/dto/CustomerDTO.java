@@ -9,5 +9,7 @@ public class CustomerDTO {
 	
 	private Integer cno;
 	private String cname;
+	private String caddress;
 	private Float billAmount;
+	private Long cmobile;
 }

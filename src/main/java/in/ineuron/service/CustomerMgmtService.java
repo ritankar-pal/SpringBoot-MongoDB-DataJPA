@@ -58,4 +58,16 @@ public class CustomerMgmtService implements ICustomerMgmtService {
 		return "Dcument Deletion Failed...";
 	}
 
+
+	@Override
+	public List<Customer> fetchCustomerByBillAmount(Float min, Float max) {
+		return repo.findByBillAmountBetween(min, max);
+	}
+
+
+	@Override
+	public List<Customer> fetchCustomerByAddressAndHavingMobileNo(String... address) {
+		return repo.findByCaddressInAndCmobileIsNotNull(address);
+	}
+
 }

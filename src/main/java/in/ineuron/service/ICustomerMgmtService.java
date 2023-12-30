@@ -9,4 +9,6 @@ public interface ICustomerMgmtService {
 	public String registerCustomer(CustomerDTO dto);
 	public List<Customer> findAllCustomers();
 	public String removeCustomer(String id);
+	public List<Customer> fetchCustomerByBillAmount(Float min, Float max);
+	public List<Customer> fetchCustomerByAddressAndHavingMobileNo(String...address);
 }

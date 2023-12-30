@@ -24,6 +24,12 @@ public class Customer {
 	private String cname;
 	
 	@NonNull
+	private String caddress;
+	
+	@NonNull
+	private Long cmobile;
+	
+	@NonNull
 	private Float billAmount;
 	
 	

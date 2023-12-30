@@ -19,10 +19,10 @@ public class Application {
 		
 		
 		//insert one customer:
-		
-		  String status = service.registerCustomer(new CustomerDTO(17, "Rimi", 650.40f)); 
-		  System.out.println(status);
-		 
+		/*
+		 * String status = service.registerCustomer(new CustomerDTO(14, "Prema",
+		 * "Chattisgarh", 5000.40f, 588747479547115L)); System.out.println(status);
+		 */
 		
 		
 		System.out.println();
@@ -34,6 +34,14 @@ public class Application {
 		 * String status = service.removeCustomer("658e72844fea167a7f10d42c");
 		 * System.out.println(status);
 		 */
+		
+		
+		//Custom Methods: (finder methods)::
+//		service.fetchCustomerByBillAmount(500f, 1100f).forEach(System.out::println);
+		
+		
+		service.fetchCustomerByAddressAndHavingMobileNo("Pune", "Kolkata").forEach(System.out::println);
+		
 		
 		((ConfigurableApplicationContext) factory).close();
 	}
